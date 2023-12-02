@@ -1,8 +1,10 @@
-package com.shubham.hibernate;
+package com.shubham.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 @Entity
+@Table(name="song")
 public class Song {
     @Id
     @Column(name = "songId")
@@ -28,6 +30,10 @@ public class Song {
     }
     public void setSingerName(String singerName){
         this.singerName = singerName;
+    }
+    @Override
+    public String toString() {
+        return "Song [id=" + songId + ", songName=" + songName + ", singerName=" + singerName + "]";
     }
 
 }
