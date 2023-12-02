@@ -16,8 +16,16 @@ public class App {
         song.setId(2);
         song.setSongName("Damadam Mast Kalandar");
         song.setSingerName("Abida Parveen");
+        String songName = song.getSongName();
+        String singerName = song.getSingerName();
+        System.out.println(songName + "----> " + singerName);
         session.beginTransaction();
-        session.persist(song);
+        try{
+            // session.persist(song);
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        
         session.getTransaction().commit();
         System.out.println("Done!");
     }

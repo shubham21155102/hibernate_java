@@ -27,4 +27,10 @@
 - |     id                        <------>                             Database
 - |     name                <(O)  (R)>
 - |     state                    <(M)>
--
+- 
+
+## Session Factory vs Session
+
+**immutable/singleton** -> - session factory
+
+**can be multiple** -> session
