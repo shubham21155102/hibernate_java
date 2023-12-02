@@ -14,7 +14,7 @@ public class DeleteApp {
         SessionFactory factory =HibernateUtils.getSessionFactory();
         Session session = factory.openSession();
         session.beginTransaction();
-        Song song=session.get(Song.class, 1);
+        Song song=session.get(Song.class, 0);
         session.delete(song);
         session.getTransaction().commit();
         System.out.println("Done!");

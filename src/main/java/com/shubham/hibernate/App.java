@@ -17,7 +17,7 @@ public class App {
         Session session = factory.openSession();
         System.out.println("Hello World!");
         Song song = new Song();
-        song.setId(1);
+        // song.setId(1);
         song.setSongName("Damadam Mast Kalandar");
         song.setSingerName("Abida Parveen");
         String songName = song.getSongName();

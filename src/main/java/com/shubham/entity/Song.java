@@ -1,6 +1,7 @@
 package com.shubham.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
@@ -8,6 +9,7 @@ import javax.persistence.Table;
 public class Song {
     @Id
     @Column(name = "songId")
+    @GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY)
     private int songId;
     @Column(name = "songName")
     private String songName;
